@@ -1,0 +1,10 @@
+version: "2"
+services:
+  web:
+    image: ctftraining/base_image_nginx_php_56
+    volumes:
+      - ./:/var/www/html/
+    ports:
+      - "127.0.0.1:8085:80"
+    environment:
+      - FLAG=flag{test_awd_auto_attack_framework}
